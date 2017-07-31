@@ -1,0 +1,40 @@
+<% include ../partials/boilerplate %>
+  <% include ../partials/nav %>
+
+  <div class='container'>
+    <div class='centerContainer'>
+      <table>
+        <thead>
+          <tr>
+            <th>Description</th>
+            <th>Detail</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>State</th>
+          </tr>
+        </thead>
+        <tbody>
+          <td><%= data.description %></td>
+          <td><%= data.detail %></td>
+          <td><%= data.tododatestr %></td>
+          <td><%= data.todotimestr %></td>
+          <td><%= data.category %></td>
+          <td><%= data.state %></td>
+
+          <td class='links'>
+            <a href='/todoList/<%= data.id %>/edit'>Edit</a>
+          </td>
+          <td>
+            <form method='POST' action='/todoList/<%= data.id %>?_method=DELETE'>
+              <input class='.myButton'  type='submit' value='Delete'/>
+            </form>
+          </td>
+        </tbody>
+      </table>
+    </div>
+    <div class='linkback'>
+      <a class='seeall' href='/todoList/'>See all todoList</a>
+    </div>
+  </div>
+
+<% include ../partials/end %>

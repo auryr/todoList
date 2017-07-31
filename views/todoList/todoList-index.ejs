@@ -1,0 +1,45 @@
+<% include ../partials/boilerplate %>
+    <% include ../partials/nav %>
+
+    <div class='container'>
+      <div class='centerContainer'>
+        <h1>My todo list</h1>
+        <form action="/todolist/add">
+          <input type="submit" value="New todo List" />
+        </form>
+        <div class='centerContainer'>
+          <table>
+            <thead>
+                <tr>
+                  <th>Description</th>
+                  <th>Detail</th>
+                  <th>Date</th>
+                  <th>Time</th>
+                  <th>Category</th>
+                  <th>State</th>
+                </tr>
+            </thead>
+            <tbody>
+              <% for (let todoList of data) { %>
+                <tr>
+                  <td><%= todoList.description %></td>
+                  <td><%= todoList.detail %></td>
+                  <td><%= todoList.tododatestr %></td>
+                  <td><%= todoList.todotimestr %></td>
+                  <td><%= todoList.category %></td>
+                  <td><%= todoList.state %></td>
+                  <td><a class='linkto' href='/todoList/<%= todoList.id %>'>Info</a></td>
+                  <td>
+                    <form method='POST' action='/todoList/<%= todoList.id %>?_method=DELETE'>
+                      <input class='.myButton' type='submit' value='Delete' />
+                    </form>
+                  </td>
+                </tr>
+              <% } %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+<% include ../partials/end %>

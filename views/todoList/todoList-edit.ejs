@@ -1,0 +1,21 @@
+<% include ../partials/boilerplate %>
+	<% include ../partials/nav %>
+	<div class='container'>
+		<div class='centerContainer'>
+			<form method='POST' action='/todolist/<%= data.id %>?_method=PUT'>
+			  <input name='description' type='text' value='<%= data.description %>' />
+			  <textarea name='detail' id='detail' ><%= data.detail %></textarea>
+			  <input name='todoDate' type='date' value='<%= data.tododatestr %>' />
+			  <input name='todoTime' type='time' value='<%= data.todotimestr %>' />
+
+				<select>
+				  <option value="volvo">Volvo</option>
+				  <option value="saab">Saab</option>
+				  <option value="opel">Opel</option>
+				  <option value="audi">Audi</option>
+				</select>
+			  <input class='.myButton' type='submit' value='Edit' />
+			</form>
+		</div>
+	</div>
+<% include ../partials/end %>

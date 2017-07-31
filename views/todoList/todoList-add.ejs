@@ -1,0 +1,15 @@
+<% include ../partials/boilerplate %>
+	<% include ../partials/nav %>
+	<div class='container'>
+		<div class='centerContainer'>
+			<form method='POST' action='/todoList'>
+			  <input name='description' type='text' placeholder='description'/>
+			  <textarea name='detail' id='detail' ></textarea>
+			  <input name='todoDate' type='date' placeholder='todoDate' />
+			  <input name='todoTime' type='time' placeholder='todoTime'>
+			  <input class='.myButton' type='submit' value='Submit'/>
+			</form>
+		</div>
+	</div>
+	,
+<% include ../partials/end %>
