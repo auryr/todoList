@@ -1,0 +1,16 @@
+<% include ../partials/boilerplate %>
+  <% include ../partials/nav %>
+  <div class='container'>
+    <div class='centerContainer'>
+        <h2><%= data.description %></h2>
+        <a href='/categories/<%= data.id %>/edit'>Edit</a>
+        <form method='POST' action='/categories/<%= data.id %>?_method=DELETE'>
+          <input type='submit' value='Delete' />
+        </form>
+    </div>
+    <div class='linkback'>
+      <a class='seeall' href='/categories/'>See all  categories</a>
+    </div>
+  </div>
+
+<% include ../partials/end %>

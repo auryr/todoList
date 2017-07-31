@@ -1,0 +1,11 @@
+<% include ../partials/boilerplate %>
+	<% include ../partials/nav %>
+	<div class='container'>
+		<div class='centerContainer'>
+			<form method='POST' action='/categories/<%= data.id %>?_method=PUT'>
+			  <input name='description' type='text' value='<%= data.description %>' />
+			  <input type='submit' value='Edit'/>
+			</form>
+		</div>
+	</div>
+<% include ../partials/end %>

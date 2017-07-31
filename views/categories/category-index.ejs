@@ -1,0 +1,31 @@
+<% include ../partials/boilerplate %>
+  <% include ../partials/nav %>
+  <div class='container'>
+    <div class='centerContainer'>
+      <h1>Categories</h1>
+      <form action="/categories/add">
+        <input type="submit" value="New category" />
+      </form>
+      <table>
+        <thead>
+            <tr>
+              <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+          <% for (let category of data) { %>
+            <tr>
+              <td><%= category.description %></td>
+              <td><a class='linkto' href='/categories/<%= category.id%>'>Info</a></td>
+              <td>
+                <form method='POST' action='/categories/<%= category.id %>?_method=DELETE'>
+                  <input type='submit' value='Delete' />
+                </form>
+              </td>
+            </tr>
+          <% } %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+<% include ../partials/end %>
