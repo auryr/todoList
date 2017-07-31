@@ -1,0 +1,369 @@
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"]{
+    background: none;
+    border: 0;
+    color: inherit;
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    padding: 0;
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  font-size: 18px;
+  font-family: sans-serif;
+  line-height: 1.4em;
+  flex-direction: column;
+}
+
+
+input[type="button"]{
+  width: 120px
+  height: 50px;
+  border-radius: 5px;
+  background: #4285f4;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 30px ;
+  box-shadow: 0px 17px 10px  -10px rgba(0,0,0,0.4);
+  transition: all ease-in-out 300ms;
+}
+
+.myButton:hover{
+  box-shadow: 0px 26px 26px  0px rgba(0,0,0,0.4);
+  transform: translateY(-5px);
+
+}
+
+.container {
+  background: silver url(/images/background2.jpg)  no-repeat fixed center;
+  background-size:  100% 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.centerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width:90%;
+  background-image: url(/images/background.jpg) no-repeat fixed center;
+  background-size: cover;
+  background-color: lightgray;
+  color: black;
+}
+
+
+.detail-container {
+  flex: 3;
+  max-width: 80vw;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+.show .detail-container {
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.seeall {
+  flex: 1;
+  font-size: 1.8em;
+  color: black;
+  border-bottom: 3px solid blue;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.linkback {
+  flex: 1;
+}
+
+.detail-container .detail {
+  display: flex;
+  flex-direction: column;
+  flex: 1 300px;
+  padding: 15px;
+  margin: 5px;
+  border: 1px solid #eee;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+h1 {
+  margin: 2.5em;
+  font-size: 2.5em;
+  font-weight: 900;
+}
+
+
+h2 {
+  color: black;
+  font-size: 2em;
+  font-weight: 900;
+  font-style: oblique;
+  line-height: 1em;
+  letter-spacing: 1px;
+  margin: 2em;
+}
+
+.links {
+  display: flex;
+  font-size: 0.8em;
+  color: black;
+  justify-content: space-around;
+  margin: 5px;
+  padding: 5px;
+}
+
+a {
+  color: yellow;
+  text-decoration: none;
+}
+
+
+.add , .edit{
+  box-sizing: border-box;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #eee;
+}
+
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=number],
+input[type=time],
+input[type=date]  {
+  border: 0;
+  border-bottom: 3px solid #eee;
+  font-size: 1.7em;
+  margin: 20px 0;
+  padding: 5px;
+  display: block;
+  width: 100%;
+  transition: 0.3s;
+}
+
+input[type=submit]
+  {
+  display: block;
+  margin: auto;
+  padding: 10px 30px;
+  font-size: 1.5em;
+  color: black;
+  font-weight: 900;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+input[type=password]:hover,
+input[type=email]:hover,
+input[type=submit]:hover,
+input[type=text]:hover,
+input[type=number]:hover,
+input[type=time]:hover,
+input[type=date]:hover {
+  outline: 0;
+  background-color: lightyellow ;
+}
+
+table {
+    font-family: georgia;
+    font-size: 14px;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: rgba(255,255,153,0.5);:
+}
+
+td, th {
+    border: 1px solid silver;
+    text-align: left;
+    height: 30px;
+    padding: 8px;
+}
+
+th {
+    background-color:lightblue;
+    color: black;
+    font-weight: bold;
+}
+
+td,tr{
+  width: 100px;
+  word-wrap: break-word;
+}
+
+/*change the color of each row depending if its odd or even*/
+tr:nth-child(odd) {
+    background-color: silver;
+    color: blue;
+    font-size: 1.5em;
+    width: 100px;
+}
+tr:nth-child(even) {
+    background-color: lightblue;
+    color: black;
+    font-size: 1.5em;
+    width: 100px;
+}
+/* ========== menu ==============B  */
+  .lSocialM{
+    width:  50px;
+    height: 50px;
+    border: none
+  }
+
+  .detsm{
+    width: 100%;
+    height: 40px;
+    line-height: 30px;
+    text-align: center;
+    vertical-align: middle;
+  }
+
+
+  nav {
+    margin: 2% 5% 0% 5%;
+    text-align: center;
+    width: 100%;
+    background-color:  gray;
+    margin: 0;
+
+  }
+
+  nav > ul {
+    list-style: none;
+    display: inline-block;
+    background-color: transparent;
+    width: 100%;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+
+
+  nav > ul > .li {
+    float: left;
+    width: 12%;
+    height: 50px;
+    position: relative;
+
+    font-size: 14px;
+    color: yellow;
+    cursor: pointer;
+  }
+
+  nav > ul > .lSocialM {
+    float: left;
+    width: 60px;
+    height: 50px;
+  }
+
+  nav > ul > li:hover > ul{
+      top:100%;
+      color: white;
+  }
+
+  nav > ul > li:hover {
+    background-color:transparent;
+    box-shadow: 0px 0px 0px yellow,
+    6px 6px 8px rgba(255,255,0,0.5  ),
+    6px 6px 8px yellow,
+    0px 0px 0px rgba(255,255,0,0.5  );
+    color: white;
+    border-radius: 5px;
+
+  }
+
+  ul.drop-menu {
+    position: absolute;
+    bottom: 100%;
+    width: 100%;
+  }
+
+  ul.drop-menu .li {
+    background:  rgba(0,0,0,0.5 );
+    color: black;
+  }
+
+  ul.drop-menu li:hover {
+    background:  rgba(0,0,0,0.3 );
+    color: black;
+
+  }
+
+  ul.drop-menu li:last-child {
+    border-radius: 0px 0px 5px 5px;
+  }
+
+  ul.drop-menu li {
+    display: none;
+  }
+
+  li:hover > ul.drop-menu li {
+    display: block;
+  }
+
+  li:hover > ul.drop-menu .subMenu {
+    perspective: 1000px;
+  }
+
+  li:hover > ul.drop-menu .subMenu li{
+    opacity: 0;
+  }
+
+
+  li:hover > ul.drop-menu li:nth-child(1) {
+    animation-name: display;
+    animation-duration: 150ms;
+    animation-delay: 0ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+  }
+
+  li:hover > ul.drop-menu li:nth-child(2) {
+    animation-name: display;
+    animation-duration: 150ms;
+    animation-delay: 150ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+  }
+
+  li:hover > ul.drop-menu li:nth-child(3) {
+    animation-name: display;
+    animation-duration: 150ms;
+    animation-delay: 300ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+  }
+
+
+  li:hover > ul.drop-menu li:nth-child(4) {
+    animation-name: display;
+    animation-duration: 150ms;
+    animation-delay: 450ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+  }
