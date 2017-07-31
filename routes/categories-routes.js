@@ -5,7 +5,7 @@ const authHelpers = require('../services/auth/auth-helpers');
 const categoriesController = require('../controllers/categories-controller');
 
 
-categoryRoutes.get('/', authHelpers.loginRequired,categoriesController.index);
+categoryRoutes.get('/', categoriesController.index);
 categoryRoutes.post('/',authHelpers.loginRequired,categoriesController.create);
 
 categoryRoutes.get('/add',authHelpers.loginRequired, (req, res) => {

@@ -8,9 +8,9 @@ TodoList.findAll = function(user_id) {
 }
 
 TodoList.findById = function(id){
- return db.query(`SELECT t.*, to_char(t.tododate,'yyyy-MM-dd') as tododatestr,
+ return db.one(`SELECT t.*, to_char(t.tododate,'yyyy-MM-dd') as tododatestr,
     to_char(t.todotime,'HH12:MI:SS') as todotimestr,c.description as category FROM todoList t
-    inner join categories c on t.category_id=c.id WHERE t.id = $1; SELECT * FROM categories;`, [id]);
+    inner join categories c on t.category_id=c.id WHERE t.id = $1`, [id]);
 }
 
 TodoList.create = function(TodoList) {

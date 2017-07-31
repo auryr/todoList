@@ -54,12 +54,12 @@ todoListController.create = function(req, res){
 todoListController.edit = function(req,res){
   TodoList.findById(req.params.id)
     .then(function(todoList){
-    console.log(todoList[0]);
+    console.log(todoList);
     res.render("todoList/todoList-edit",{
       currentPage:"edit",
       message:"ok",
-      data:todoList[0],
-      data2:todoList[1],
+      data:todoList,
+      data2:todoList,
       });
     }).catch(function(err){
       console.log("blah");
